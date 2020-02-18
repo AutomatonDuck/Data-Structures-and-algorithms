@@ -1,0 +1,46 @@
+#include <iostream>;
+#include<string.h>;
+
+// Need to figure out a way to write search for an unknown number of elements
+
+//Time complexity of log(n) time complexity
+
+using namespace std;
+
+int binary_search(const int a[], int x)
+{
+	int i = 1, j = 10 , loc;
+	while (i < j)
+	{
+		int m = (i + j) / 2;
+		if (x > a[m])
+		{
+			i = m + 1;
+
+		}
+		else
+		{
+			j = m;
+		}
+
+	}
+	{
+			loc = i;
+	}
+	else
+	{
+			loc = NULL;
+	}
+	return loc;
+
+
+
+}
+
+int main()
+{
+	int a[10] = { 1,2,3,4,5,6,7,8,9,10 }, x = 1;
+
+	cout << binary_search(a, x) << endl;
+	return 0;
+}
